@@ -1,28 +1,23 @@
-/* 
-Name:Dhruv Patel
-ID:0827802
-Assignment-2 */
-
-
-/* Mobile Styles because it is mobile first approch mentioned in pdf */
+/* Mobile Styles because it is a mobile-first approach mentioned in PDF */
 
 header, main {
   margin: auto;
 }
+
 body {
   background: #ccfcff; /* Unique color for mobile devices */
   font-family: Arial, sans-serif;
-  color: #333; 
+  color: #333;
 }
 
 h1 {
-  font-size: 1.5em; /* Shrink the heading for mobile devices */
-  color: #444; 
+  font-size: 1.2em; /* Font size for extra small (mobile) screens */
+  color: #444;
 }
 
 h2 {
-  font-size: 1.2em; /* Shrink the subheading for mobile devices */
-  color: #555; 
+  font-size: 1em; /* Font size for extra small (mobile) screens */
+  color: #555;
 }
 
 nav {
@@ -41,12 +36,12 @@ nav a {
   }
 
   h1 {
-    font-size: 2em; /* Adjust heading size for tablets */
-    color: #a00b0b; 
+    font-size: 1.8em; /* Font size for tablets */
+    color: #a00b0b;
   }
 
   h2 {
-    font-size: 1.5em; /* Adjust subheading size for tablets */
+    font-size: 1.4em; /* Font size for tablets */
     color: #a00b0b;
   }
 
@@ -63,44 +58,43 @@ nav a {
 /* Desktop Styles */
 @media screen and (min-width: 1025px) {
   body {
-    background: #ccffcc; /* Unique color for desktop devices */
+    background: #ccffcc; 
+    font-size: 1.3em;
   }
 
   h1 {
-    font-size: 3em;
-    color: #690569; /* Heading color for desktop devices */
+    font-size: 2.5em; /* Font size for desktop screens */
+    color: #690569;
   }
 
   h2 {
-    font-size: 2em;
-    color: #690569; /* Subheading color for desktop devices */
+    font-size: 1.8em; /* Font size for desktop screens */
+    color: #690569;
   }
 }
 
-
-/* for smaller screen it create three column layout */
-/* added this after instructor permission */
+/* For smaller screens, it creates a three-column layout */
+/* Added this after instructor permission */
 @media screen and (max-width: 1024px) {
   #characteristics ul {
     list-style-type: none;
     padding: 0;
-    display: flex; 
-    flex-wrap: wrap; 
+    display: flex;
+    flex-wrap: wrap;
   }
 
   #characteristics ul li {
-    flex: 1; 
+    flex: 1;
     margin: 5px;
-    background-color: #f0f0f0; 
-    padding: 10px; 
-    border-radius: 5px; 
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
   }
 }
 
-
 /* Footer Styles */
 footer {
-  background: #333; 
+  background: #333;
   color: #fff;
   padding: 10px 0;
   text-align: center;
@@ -111,5 +105,3 @@ footer p {
   margin: 0;
   font-size: 0.8em;
 }
-
-
