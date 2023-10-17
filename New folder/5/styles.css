@@ -1,0 +1,214 @@
+
+/* i used my assignment 3 as it mentioned in pdf */
+
+/* Common styles for all screen sizes */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ff9999; 
+    transition: background-color 0.3s;
+    box-sizing: border-box;
+}
+
+/* Mobile first approach*/
+header {
+    background-color: #333; 
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hamburger {
+    cursor: pointer;
+    display: block; 
+}
+
+.bar {
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    margin: 3px 0;
+}
+
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Style the web/COMPANY name */
+.web-name {
+    color: #fff; 
+    font-size: 24px; 
+}
+ul#menu {
+    display: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+    position: fixed; /* Change to fixed to cover the entire screen */
+    top: 0;
+    left: 0; /* Cover the entire screen */
+    width: 100%;
+    height: 100%; /* Cover the entire screen */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1; /* Make sure it's on top of other content */
+}
+
+
+
+ul#menu li {
+    padding: 10px 20px;
+    text-align: center; /* Center-align menu items */
+}
+
+ul#menu li a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+ul#menu.visible {
+    display: block;
+}
+
+/* Add styles for the "X" shape when the menu is open */
+#menu-toggle.open .bar:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+#menu-toggle.open .bar:nth-child(2) {
+  opacity: 0;
+}
+
+#menu-toggle.open .bar:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Tablet and Desktop (Horizontal Navigation) */
+@media (min-width: 600px) {
+    header {
+        background-color: #456789; 
+        font-size: larger;
+    }
+    
+    .hamburger {
+        display: none;
+    }
+
+    /* Add styles for the header container in larger screens */
+    .header-container {
+        margin: 0 auto; 
+        max-width: 1200px;
+    }
+
+    .web-name {
+        font-size: 32px; 
+    }
+
+    .company {
+        flex: 0 0 auto; 
+    }
+
+    /* Push the other menu items to the right */
+    ul#menu li:not(.company) {
+        margin-left: auto;
+    }
+
+    /* Display the menu items horizontally for tablet and desktop */
+    ul#menu {
+        display: flex;
+        background-color: transparent;
+        position: static;
+        box-shadow: none;
+        justify-content: flex-end; 
+        top: 0; 
+    }
+
+    ul#menu li {
+        padding: 0 20px;
+    }
+}
+
+/* Tablet and Desktop Background Colors Change */
+@media (min-width: 601px) and (max-width: 1024px) {
+    body {
+        background-color: rgb(207, 255, 192); /* Tablet background color */
+    }
+}
+
+@media (min-width: 1025px) {
+    body {
+        background-color: red;
+    }
+}
+
+/* Main Content Styles */
+.showcase {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.showcase-item {
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    flex: 1;
+    max-width: calc(50% - 20px);
+    box-sizing: border-box;
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+    background-color: #222;
+    color: #ffcc00;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+.showcase-item:hover {
+    background-color: #ffcc00;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    color: #222;
+    transform: scale(1.05);
+}
+
+/* Responsive Text Styles for main content*/
+h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+/* Make the image responsive */
+img {
+    max-width: 100%;
+    height: auto;
+}/* Add this CSS to your styles.css file */
+@media screen and (min-width: 600px) {
+    .mobile-only {
+      display: none;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .showcase {
+        flex-direction: column; /* Change to a vertical layout */
+    }
+
+    .showcase-item {
+        max-width: 100%; /* Make each item occupy the full width */
+    }
+}
